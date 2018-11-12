@@ -1,0 +1,23 @@
+
+<html>
+  <head>
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename="bootstrap-3.3.7-dist/css/bootstrap.min.css") }}" rel="stylesheet">
+
+
+  </head>
+  <body>
+    <script src="{{ url_for('static', filename="bootstrap-3.3.7-dist/js/bootstrap.min.js") }}"></script> 
+
+    {% for f in files %}
+      <a href= {{ urlP+f.title }} >{{ f.title }}</a>
+      {% for tag in f.tags %}
+        <div>{{ tag }}</div>
+      {% endfor %}
+    {% endfor %}
+  
+  </body>
+
+</html>
+
+
