@@ -1,0 +1,6 @@
+{% for f in files %}
+<a href= {{ urlP+f.title }} >{{ f.title }}</a>
+  {% for tag in f.tags %}
+    <div>{{ tag }}</div>
+  {% endfor %}
+{% endfor %}
